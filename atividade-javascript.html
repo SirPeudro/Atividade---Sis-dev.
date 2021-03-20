@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<meta chairset="UTF-8">
+  <head>
+      <style>
+          body{
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color:aliceblue;
+            margin: 0;
+            font-size: 30px;
+          }
+          .square{
+            background-color: #1a1a1a;
+            border-radius: 20px;;
+            width: 48%;
+            height: 0;
+            padding-bottom: 48%;
+            margin: 1%;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          .block{
+            position: absolute;
+            text-align: center;
+            background: #1a1a1a;
+            width: 100%;
+            height: 100%;
+            
+          }
+        input{
+             height: 20px;
+         }
+        .centered {
+            display: inline-block;
+            vertical-align: middle;
+            width: 80%;
+            background: #222;
+            color: #FFF;
+            }
+        #date, #submit{
+                margin-top: 5%;
+            }
+            #submit{
+                width: 120px;
+                height: 20px;
+            }
+
+      </style>  
+
+    <body>
+        <div class="square">
+            <div class="block" 
+                <div class="centered">
+                    <h1>Insira seus dados abaixo!</h1>
+                    <p>Em seguida clique em Concluído</p>
+                    <form>
+                        <label for="fname">Nome Completo:</label>
+                        <input type="text" id="fname" name="fname">
+                        <br>
+                        <label for=""> Data de Nascimento</label>
+                        <input type="date" id="date" name="date">
+                        <br>
+                    </form>
+                    <button id="submit" onclick="capturar()">Concluído</button>
+                    <p id="valorDigitado1"></p>
+                    <p id="valorDigitado2"></p>
+                </div>  
+            </div>
+        </div>
+    </body>
+    <script>
+        function capturar () {
+            dados1 = document.getElementById('fname').value;
+            dados2 = document.getElementById('date').value;
+            document.getElementById('valorDigitado1').innerHTML = dados1;
+            document.getElementById('valorDigitado2').innerHTML = dados2;
+        }
+    </script>
+  </head>
+</html>
